@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMPH: Search and Replace</title>
+</head>
+<body>
+    <h1>UMPH: Search and Replace</h1>
+
+    <form>
+        <label for="strOriginal"><b>strOriginal: </b></label></label></label></label>
+        <input type="text" name="strOriginal" id="strOriginal"><br><br>
+        <label for="strReplaceable"><b>strReplaceable: </b></label></label></label></label>
+        <input type="text" name="strReplaceable" id="strReplaceable"><br><br>
+        <label for="strReplacement"><b>strReplacement: </b></label></label></label></label>
+        <input type="text" name="strReplacement" id="strReplacement"><br><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <hr>
+
+    <div>
+        <h4>Text Output:</h4>
+        <h4 id="flash" style="color: red;"></h4>
+        <div id="output">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="replace.js"></script>
+</body>
+</html>
