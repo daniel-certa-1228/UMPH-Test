@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("Test")
 //prevent the defaul action of the submit button
 $("form").submit(function(event){
     event.preventDefault();
