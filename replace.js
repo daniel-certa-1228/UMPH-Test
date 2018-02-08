@@ -1,20 +1,28 @@
 "use strict";
-console.log("Test")
+
 //prevent the defaul action of the submit button
 $("form").submit(function(event){
     event.preventDefault();
 });
+//capitalizes the first letter of a string
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function searchReplace(strOriginal, strReplaceable, strReplacement) {
     //create a new array by splitting the input string on spaces
     let stringArray = strOriginal.split(" ");
     //check each word to see if it matches the replaceable input
     let newStringArray = stringArray.map(function(word,index){
-        if(word === strReplaceable){
-            return strReplacement;   
-        }  else  {
-            return word;
-        }
+        // console.log(capitalize(strReplacement));
+            if((word.toLowerCase() == strReplaceable) && (stringArray.indexOf(word) === 0)){
+                //capitalizes the beginning of a sentecnce
+                return capitalize(strReplacement);
+            }  else if (word.toLowerCase() == strReplaceable) {
+                return strReplacement;   
+            }  else  {
+                return word;
+            }
     });
     //join array into the new string
     let finalString = newStringArray.join(" ");
