@@ -14,7 +14,6 @@ function searchReplace(strOriginal, strReplaceable, strReplacement) {
     let stringArray = strOriginal.split(" ");
     //check each word to see if it matches the replaceable input
     let newStringArray = stringArray.map(function(word,index){
-        // console.log(capitalize(strReplacement));
             if((word.toLowerCase() == strReplaceable) && (stringArray.indexOf(word) === 0)){
                 //capitalizes the beginning of a sentecnce
                 return capitalize(strReplacement);
